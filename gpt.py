@@ -3,7 +3,9 @@ import streamlit as st
 import pandas as pd
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = 'AIzaSyA3J6HpIlBJPImcDVE384ZoDW-_znRH4Cw'
+api_key = st.secrets[api_key]
+
+'AIzaSyA3J6HpIlBJPImcDVE384ZoDW-_znRH4Cw'
 
 
 

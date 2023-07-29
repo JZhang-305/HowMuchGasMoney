@@ -290,10 +290,16 @@ if st.button('Calculate ⛽'):
         st.map(df, size='size', color='color')
         st.write("**P.P.S.** By the way, red represents the starting location, green represents the destination, and blue represents any pickup locations")
         
-        if results['total_extra_distance'] > 0:
+        if len(results['list_of_addresses']['pickup']) == 0:
+            st.write("The total distance is **" + str(results['solo_distance']) + " mi**")
+            st.write("It's gonna cost **$" + str(results['solo_cost']) + "** in gas")
+            st.write("It's gonna take **" + str(results['duration'][0]) + "**")
+
+        elif results['total_extra_distance'] > 0:
             st.write("I have to drive **" + str(results['total_extra_distance']) + " mi** extra because of you 😠")
             st.write("It's gonna cost **$" + str(results['total_extra_cost']) + "** more in gas to pick you up 📉")
             st.write("Each of you owes **$" + str(round(results['total_extra_cost']/len(results['list_of_addresses']['pickup']), 2)) + "**")
+            
         else:
             st.write("Driving you made us slower, but I actually drive **" + str(results['total_extra_distance'] * -1) + " mi** less because of you")
             st.write("I saved **$" + str(results['total_extra_cost'] * -1) + "** in gas money 💹")

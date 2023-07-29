@@ -226,7 +226,9 @@ mpg = st.number_input("Enter the Miles Per Gallon (MPG) of your vehicle", min_va
 # "Averages: Coupe - xxx, Crossover - xxx, Sedan - xxx, Hatchback - xxx, SUV - xxx, Minivan - xxx, Truck - xxx"
 cost_of_gas = st.number_input("Enter the cost of gas per gallon", min_value=0.0, value=3.50)
 
-roundtrip = st.checkbox(label = "Are you driving them home too?")
+if len(pickup_addresses) != 0:
+    roundtrip = st.checkbox(label = "Are you driving them home too?")
+    
 st.write("**P.S.** The average mpg is 25.0 and gas is like 3.50 right now")
 # When the calculate button is pressed
 if st.button('Calculate ⛽'):
@@ -299,7 +301,7 @@ if st.button('Calculate ⛽'):
             st.write("I have to drive **" + str(results['total_extra_distance']) + " mi** extra because of you 😠")
             st.write("It's gonna cost **$" + str(results['total_extra_cost']) + "** more in gas to pick you up 📉")
             st.write("Each of you owes **$" + str(round(results['total_extra_cost']/len(results['list_of_addresses']['pickup']), 2)) + "**")
-            
+
         else:
             st.write("Driving you made us slower, but I actually drive **" + str(results['total_extra_distance'] * -1) + " mi** less because of you")
             st.write("I saved **$" + str(results['total_extra_cost'] * -1) + "** in gas money 💹")

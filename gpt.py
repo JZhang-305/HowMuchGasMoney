@@ -215,10 +215,10 @@ pickup_addresses = []
 #address = st.text_input("Pickup Address 🐋")
 
 for i in range(3):
-     if i == 0:
-        address = st.text_input(f"Pickup Address {i + 1} 🐋")
-     else:
-        address = st.text_input(f"Pickup Address {i + 1} 🐋", placeholder = 'optional')
+     #if i == 0:
+        #address = st.text_input(f"Pickup Address {i + 1} 🐋")
+     #else:
+     address = st.text_input(f"Pickup Address {i + 1} 🐋", placeholder = 'optional')
      if address:
          pickup_addresses.append(address)
 

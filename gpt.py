@@ -226,9 +226,10 @@ mpg = st.number_input("Enter the Miles Per Gallon (MPG) of your vehicle", min_va
 # "Averages: Coupe - xxx, Crossover - xxx, Sedan - xxx, Hatchback - xxx, SUV - xxx, Minivan - xxx, Truck - xxx"
 cost_of_gas = st.number_input("Enter the cost of gas per gallon", min_value=0.0, value=3.50)
 
-#if len(pickup_addresses) != 0:
-roundtrip = st.checkbox(label = "Are you driving them home too?")
-    
+if len(pickup_addresses) != 0:
+    roundtrip = st.checkbox(label = "Are you driving them home too?")
+else:
+    roundtrip = False
 st.write("**P.S.** The average mpg is 25.0 and gas is like 3.50 right now")
 # When the calculate button is pressed
 if st.button('Calculate ⛽'):

@@ -232,7 +232,7 @@ else:
     roundtrip = False
 st.write("**P.S.** The average mpg is 25.0 and gas is like 3.50 right now")
 # When the calculate button is pressed
-if st.button('Calculate ⛽'):
+if len(origin) != 0 and len(destination) != 0 and len(str(mpg)) != 0 and len(str(cost_of_gas)) != 0 and st.button('Calculate ⛽'):
     results = calculate_distance(api_key, origin, destination, mpg, cost_of_gas, roundtrip=roundtrip, pickup=pickup_addresses)
     if results:
         # if all directions were generated correctly

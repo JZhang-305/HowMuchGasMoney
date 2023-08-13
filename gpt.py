@@ -5,7 +5,7 @@ import pandas as pd
 # Replace 'YOUR_API_KEY' with your actual API key
 api_key = st.secrets['api_key']
 
-
+st.set_page_config(page_title="How Much For Gas")
 
 
 def get_geocode(address, gmaps):

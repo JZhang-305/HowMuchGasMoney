@@ -199,7 +199,7 @@ def calculate_distance(api_key, origin, destination, mpg, costOfGas, roundtrip=F
 
 # Variables for user inputs
 st.title("How Much For ⛽")
-st.write("For when cheap friends ask to get picked up, just charge them! Or you can use this to calculate gas from A to B with no pickups but what's the fun in that!")
+st.header("Howmuchforgas.com, the best gas price calculator for extorting your cheap friends! Or you can use this to calculate gas from A to B with no pickups but what's the fun in that!")
 #origin = st.text_input("Origin Address 🚩", value = "12 Poplar Lane, Commack NY 11725", placeholder="where u start from")
 origin = st.text_input("Origin Address 🚩", placeholder="where u start from")
 #destination = st.text_input("Destination Address 💹", value = "2020 Jericho Tpke, Commack NY 11725", placeholder = "where u going")

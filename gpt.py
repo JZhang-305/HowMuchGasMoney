@@ -311,6 +311,7 @@ if len(origin) != 0 and len(destination) != 0 and len(str(mpg)) != 0 and len(str
         '''--------------------------------------------'''
         st.write("I'm a W UI designer - jz 7/28/2023")
         st.write("ibrahim owes me a lot of money")
+        st.write("coproduced by jordan vogel")
         #st.write(results['list_of_addresses'])
     
     else:
